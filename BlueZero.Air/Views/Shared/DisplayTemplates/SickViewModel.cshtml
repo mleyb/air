@@ -1,0 +1,42 @@
+﻿@model BlueZero.Air.Models.SickViewModel
+
+<div>
+    <ul class="unstyled">
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Date, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Date)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Description, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Description)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Detail, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Detail)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.DoctorRecommended, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.DoctorRecommended)
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

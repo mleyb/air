@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3515D42-B949-46EA-8778-20ADDCFA35DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlueZero.Air.Data.Services</RootNamespace>
+    <AssemblyName>BlueZero.Air.Data.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleChartSharp, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\GoogleChartSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityService.cs" />
+    <Compile Include="BottleService.cs" />
+    <Compile Include="CarerService.cs" />
+    <Compile Include="ChartService.cs" />
+    <Compile Include="ChildService.cs" />
+    <Compile Include="DataService.cs" />
+    <Compile Include="DrinkService.cs" />
+    <Compile Include="FirstAidService.cs" />
+    <Compile Include="IActivityService.cs" />
+    <Compile Include="IBottleService.cs" />
+    <Compile Include="ICarerService.cs" />
+    <Compile Include="IChartService.cs" />
+    <Compile Include="IChildService.cs" />
+    <Compile Include="IDrinkService.cs" />
+    <Compile Include="IFirstAidService.cs" />
+    <Compile Include="IMealService.cs" />
+    <Compile Include="IMedicineService.cs" />
+    <Compile Include="IMilestoneService.cs" />
+    <Compile Include="INappyService.cs" />
+    <Compile Include="INoteService.cs" />
+    <Compile Include="IParentService.cs" />
+    <Compile Include="ISickService.cs" />
+    <Compile Include="ISleepService.cs" />
+    <Compile Include="ISnackService.cs" />
+    <Compile Include="MealService.cs" />
+    <Compile Include="MedicineService.cs" />
+    <Compile Include="MilestoneService.cs" />
+    <Compile Include="NappyService.cs" />
+    <Compile Include="NoteService.cs" />
+    <Compile Include="ParentService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SickService.cs" />
+    <Compile Include="SleepService.cs" />
+    <Compile Include="SnackService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlueZero.Air.Data\BlueZero.Air.Data.csproj">
+      <Project>{d2a8227c-9eff-4c86-8cf8-fe02f9abb89c}</Project>
+      <Name>BlueZero.Air.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlueZero.Air.Support\BlueZero.Air.Support.csproj">
+      <Project>{6210a1fa-9971-4fc6-99e3-04b8e45e8304}</Project>
+      <Name>BlueZero.Air.Support</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

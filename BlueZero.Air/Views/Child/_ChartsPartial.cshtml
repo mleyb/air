@@ -1,0 +1,55 @@
+﻿@*@model BlueZero.Air.Models.ChildChartViewModel
+
+<h3>Charts</h3>
+
+<div class="row">
+    <div class="span10">
+        @using (Ajax.BeginForm("GenerateChart", "Chart", FormMethod.Post, new AjaxOptions { OnSuccess = "renderChart(data)" }, new { @class = "form-inline" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.HiddenFor(m => m.Id)
+                
+            @Html.EnumDropDownListFor(m => m.Type)
+            
+            <button type="submit" class="btn btn-primary" data-loading-text="Rendering..." style="margin-bottom: 1px;">Select</button>                                                                                                   
+        }
+
+        <div id="chart"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function renderChart(data) {
+        $('#chart').empty().append($("<img/>").attr('src', data));
+    };
+</script>*@
+
+@model DotNet.Highcharts.Highcharts
+
+<h3>Charts</h3>
+
+<div class="row">
+    <div class="span10">
+        @using (Ajax.BeginForm(
+            "Index", 
+            "Chart", 
+            FormMethod.Post, 
+            new AjaxOptions {
+                UpdateTargetId = "chart",
+                InsertionMode = System.Web.Mvc.Ajax.InsertionMode.Replace,
+                OnBegin = "siteFunctions.setSubmitButtonEnabled(false);siteFunctions.showLoadingImage();",
+                OnComplete = "siteFunctions.setSubmitButtonEnabled(true);siteFunctions.hideLoadingImage();",
+            }, 
+            new { @class = "form-inline" }))        
+        {                
+            @* @Html.EnumDropDownListFor(m => m.Type) *@                        
+            
+            <span><button type="submit" class="btn btn-primary" data-loading-text="Rendering..." style="margin-bottom:1px;">Select</button> <img id="loading" src="~/Content/images/loader.gif" alt="" style="display:none;"/></span>                                                                                                  
+        }
+
+        <div id ="chart">
+            @(Model)
+        </div>
+    </div>
+</div>

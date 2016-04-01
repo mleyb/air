@@ -1,0 +1,43 @@
+﻿<div class="row">
+    <div class="span4 offset1">
+        @if (ViewBag.OS == "Apple")
+        {
+            @Html.Partial("_ApplePhonePartial")
+        }
+        else if (ViewBag.OS == "Windows")
+        {
+            @Html.Partial("_WindowsPhonePartial")
+        }
+        else
+        {            
+            @Html.Partial("_AndroidPhonePartial")
+        }
+    </div>
+    <div class="span6">
+        <img src="~/Content/images/logo.png" alt="Kiddycare Diary" width="553" height="71" />        
+
+        @Html.Partial("_DetailsPartial")
+
+        <a href="http://play.google.com/store/apps/details?id=com.bluezero.phaeton" target="_blank" class="appstore">
+            <img src="~/Content/images/buttons/google-play.png" alt="Available at Google Play now" width="172" height="60" />            
+        </a>
+        <a href="#" class="appstore">
+            <img src="~/Content/images/buttons/appstore-coming-soon.png" alt="Available on the iPhone App Store soon" width="180" height="60" />
+        </a>
+        <a href="#" class="appstore">
+            <img src="~/Content/images/buttons/windows-store-coming-soon.png" alt="Available at the Windows Store soon" width="180" height="60" />
+        </a>
+    </div>
+</div>
+
+<hr />
+
+@Html.Partial("_FooterPartial")
+
+@section scripts {    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            siteFunctions.hideBrand();
+        });
+    </script>
+}

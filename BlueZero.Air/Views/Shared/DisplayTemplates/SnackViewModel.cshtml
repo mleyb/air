@@ -1,0 +1,32 @@
+﻿@model BlueZero.Air.Models.SnackViewModel
+
+<div>
+    <ul class="unstyled">
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Date, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Date)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Description, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Description)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.AmountConsumed, new { @class = "control-label label" })
+                    @Html.DisplayFor(m => m.AmountConsumed, "AmountConsumed")
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,40 @@
+﻿@model BlueZero.Air.Models.ChildSummaryViewModel
+
+<h3>Summary</h3>
+
+<div class="row">
+    <div class="span5">
+        <div class="well">
+            <p>
+                @Html.LabelFor(model => model.Name, new { @class = "label" })
+                <br />
+                @Html.DisplayFor(model => model.Name)
+            </p>
+            <p>
+                @Html.LabelFor(model => model.DateOfBirth, new { @class = "label" })
+                <br />
+                @Html.DisplayFor(model => model.DateOfBirth)
+            </p>
+        </div>
+    </div>
+    <div class="span5">
+        <div class="well">
+            <p>
+                @Html.LabelFor(model => model.Notes, new { @class = "label" })
+                <br />
+                @if (!String.IsNullOrEmpty(Model.Notes))
+                {
+                    @Html.DisplayFor(model => model.Notes)
+                }
+                else
+                {
+                    @("None specified.")
+                }
+            </p>
+        </div>
+    </div>
+</div>
+
+@*@Html.ActionLink("Ny bruker", "MyAction", "TestController", null, 
+               new { @class = "openModalDialog", data_dialog_id = "modaldialog", data_dialog_title = "Hello world" })    *@
+

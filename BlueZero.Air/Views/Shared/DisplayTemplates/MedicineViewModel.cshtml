@@ -1,0 +1,42 @@
+﻿@model BlueZero.Air.Models.MedicineViewModel
+
+<div>
+    <ul class="unstyled">
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Date, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Date)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Type, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Type)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Amount, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Amount)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Detail, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Amount)
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

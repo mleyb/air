@@ -1,0 +1,44 @@
+﻿@model BlueZero.Air.Models.ManageAccountModel
+@{
+    ViewBag.Title = "Manage Account";
+}
+
+<div class="row">
+    <div class="span10 offset1">
+        <div class="page-header">
+            <h1>@ViewBag.Title <small>Change account settings.</small></h1>
+        </div>
+
+        <div class="well">
+
+            <p class="message-success">@ViewBag.StatusMessage</p>
+
+            <p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
+
+            <br />
+
+            @if (ViewBag.HasLocalPassword)
+            {
+                @Html.Partial("_ChangePasswordPartial")
+            }
+            else
+            { 
+                @Html.Partial("_SetPasswordPartial")
+            }
+
+            @*
+            <section id="externalLogins">
+                @Html.Action("RemoveExternalLogins")
+
+                <h3>Add an external login</h3>
+                @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+            *@
+
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/bootstrap-validation")
+}

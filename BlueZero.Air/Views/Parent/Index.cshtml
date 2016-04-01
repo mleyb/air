@@ -1,0 +1,68 @@
+﻿@model BlueZero.Air.Models.ParentIndexViewModel
+
+@{
+    ViewBag.Title = "Parent Home";
+}
+
+<div class="row">    
+    <div class="span10 offset1">
+        <div class="row">            
+            <div id="alert" class="span3 offset7 alert alert-info fade" data-alert="alert">
+                <a class="close" href="#">&times;</a>
+                <div id="alert-message" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="page-header">
+                <h1>@ViewBag.Title <small>Your children.</small></h1>
+            </div>
+        </div>               
+
+        <div class="row">
+            @Html.Partial("_NavPartial", Model)
+        </div>
+
+        <div class="row">
+            @Html.Partial("_ContentTabsPartial", Model)
+        </div>
+    </div>
+</div>
+
+<div id='detailsDialog' class='modal hide fade in'>
+    <div id='detailsDialogContent'></div>
+</div>
+
+@section scripts {               
+    @Scripts.Render("~/bundles/highcharts")
+    @Scripts.Render("~/bundles/datatables")
+    @Scripts.Render("~/bundles/bootstrap-datepicker")    
+    @Scripts.Render("~/bundles/toastr")    
+    @Scripts.Render("~/bundles/signalR")      
+    
+    <script src="~/signalr/hubs" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            siteFunctions.showBrand();            
+            siteFunctions.applyDatePickers();
+            siteFunctions.applyDataTables();
+            siteFunctions.applyEntryRowDetailsClickHandlers();
+
+            $('.alert .close').on("click", function (e) {
+                $(this).parent().removeClass("in");
+            });
+
+            var hub = $.connection.notifierHub;
+
+            hub.client.send = function (message) {
+                var overrides = { timeOut: 5000, fadeOut: 2000, positionClass: 'toast-position' };
+                toastr.info(message, 'Update!', overrides);
+            };
+
+            $.connection.hub.start({ transport: 'longPolling' }, function () {
+                console.log('connected');
+            });
+        });
+    </script>     
+}

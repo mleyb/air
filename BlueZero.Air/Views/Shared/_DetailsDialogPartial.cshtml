@@ -1,0 +1,14 @@
+﻿@model dynamic
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">@String.Format("{0} {1}", Model.Title, "Details")</h3>
+</div>
+
+<div  class="modal-body">
+    @Html.DisplayForModel()
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">OK</button>
+</div>

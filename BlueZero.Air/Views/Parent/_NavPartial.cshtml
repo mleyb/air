@@ -1,0 +1,22 @@
+﻿@model BlueZero.Air.Models.ParentIndexViewModel
+
+<div id="menu">
+    <ul id="tabs" class="nav nav-pills">
+    @{
+        for (int i = 0; i < Model.ChildInfos.Count; i++)
+        {
+            <li class="dropdown @(i == 0 ? "active" : "")">            
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Html.Encode(Model.ChildInfos[i].Name) <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="@(i == 0 ? "active" : "")"><a href="#summary-@i" data-toggle="tab"><i class="icon-info-sign"></i> Summary</a></li>
+                    <li><a href="#today-@i" data-toggle="tab"><i class="icon-inbox"></i> Today</a></li>
+                    <li><a href="#daybyday-@i" data-toggle="tab"><i class="icon-calendar"></i> Day By Day</a></li>
+                    <li><a href="#charts-@i" data-toggle="tab"><i class="icon-bar-chart"></i> Charts</a></li>
+                    <li><a href="#notes-@i" data-toggle="tab"><i class="icon-edit"></i> Notes</a></li>
+                </ul>
+            </li>
+        }
+    }
+    </ul>
+</div>
+

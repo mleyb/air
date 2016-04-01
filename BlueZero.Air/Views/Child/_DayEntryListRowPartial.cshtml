@@ -1,0 +1,111 @@
+﻿@model BlueZero.Air.Models.DayEntry
+
+<tr>
+    @{
+        switch (Model.Type)
+        {
+            case BlueZero.Air.Models.EntryType.Activity:
+                <td>@Html.Image("/Content/images/row-icons/activity.png")</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Bottle:
+                <td>@Html.Image("/Content/images/row-icons/bottle.png")</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Drink:
+                <td>@Html.Image("/Content/images/row-icons/drink.png")</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.FirstAid:
+                <td>@Html.Image("/Content/images/row-icons/first-aid.png")</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Meal:
+                <td>@Html.Image("/Content/images/row-icons/meal.png")</td>
+                break;                
+                
+            case BlueZero.Air.Models.EntryType.Milestone:
+                <td>@Html.Image("/Content/images/row-icons/milestone.png")</td>
+                break;                
+                
+            case BlueZero.Air.Models.EntryType.Medicine:
+                <td>@Html.Image("/Content/images/row-icons/medicine.png")</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Nappy:
+                <td>@Html.Image("/Content/images/row-icons/nappy.png")</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Note:
+                <td>@Html.Image("/Content/images/row-icons/note.png")</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Sick:
+                <td>@Html.Image("/Content/images/row-icons/sick.png")</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Sleep:
+                <td>@Html.Image("/Content/images/row-icons/sleep.png")</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Snack:
+                <td>@Html.Image("/Content/images/row-icons/snack.png")</td>
+                break;                
+        }
+    }    
+
+    <td>@Html.DisplayFor(m => m.DateTime)</td>
+
+    @{
+        switch (Model.Type)
+        {
+            case BlueZero.Air.Models.EntryType.Activity:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Activity", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Bottle:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Bottle", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Drink:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Drink", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.FirstAid:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "FirstAid", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Meal:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Meal", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;                
+                
+            case BlueZero.Air.Models.EntryType.Medicine:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Medicine", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Milestone:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Milestone", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Nappy:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Nappy", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Note:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Note", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Sick:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Sick", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Sleep:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Sleep", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;
+                
+            case BlueZero.Air.Models.EntryType.Snack:
+                <td>@Html.ActionLink(Model.Type.DisplayName(), "Details", "Snack", new { id = Model.Id }, new { @class = "showDetails" })</td>
+                break;                
+        }
+    }    
+</tr>

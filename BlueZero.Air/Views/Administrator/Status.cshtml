@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Status";
+}
+
+<h2>Status</h2>
+
+<div class="row">
+    <div class="span10 offset1">
+        <div class="page-header">
+            <h1>@ViewBag.Title <small>Realtime log.</small></h1>
+        </div>
+
+        <table id="log-table" class="log">
+            <thead>
+                <tr>
+                    <th>Date
+                    </th>
+                    <th>Level
+                    </th>
+                    <th style="width: 100%">Details
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+@section scripts {
+    @Scripts.Render("~/bundles/signalR")          
+    <script src="~/signalr/hubs" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#brand').show();
+
+            var hub = $.connection.trace;
+
+            hub.client.onTraceEvent = function (loggedEvent) {
+                var dateCell = $("<td>").css("white-space", "nowrap").text(loggedEvent.TimeStamp);
+                var levelCell = $("<td>").text(loggedEvent.Level);
+                var detailsCell = $("<td>").text(loggedEvent.Message);
+                var row = $("<tr>").append(dateCell, levelCell, detailsCell);
+                $('#log-table tbody').append(row);
+            };            
+
+            $.connection.hub.start({ transport: 'longPolling' }, function () {
+                hub.server.listen();
+                console.log('connected and listening');
+            });
+        });
+    </script>
+}

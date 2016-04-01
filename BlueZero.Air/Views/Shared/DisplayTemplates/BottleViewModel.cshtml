@@ -1,0 +1,33 @@
+﻿@model BlueZero.Air.Models.BottleViewModel
+
+<div>
+    <ul class="unstyled">
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Date, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Date)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Amount, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Amount)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Unit, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Unit)
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

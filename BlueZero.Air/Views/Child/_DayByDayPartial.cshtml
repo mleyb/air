@@ -1,0 +1,45 @@
+﻿@model BlueZero.Air.Models.ChildDayByDayViewModel
+
+@{
+    string divId = String.Concat("daybyday-entries-", Model.Id);
+
+    string tableId = String.Concat("daybyday-entries-list-", Model.Id);
+
+    string onSuccess = "$(document).ready(function () { siteFunctions.applyDataTable('#" + tableId + "'); siteFunctions.applyEntryRowDetailsClickHandlers(); });";    
+}
+
+<h3>Day By Day</h3>
+
+<div class="row">
+    <div class="span10">
+        @using (Ajax.BeginForm(
+            "DayEntryList", 
+            "Child", 
+            FormMethod.Post, 
+            new AjaxOptions {
+                UpdateTargetId = divId, 
+                InsertionMode = System.Web.Mvc.Ajax.InsertionMode.Replace, 
+                OnBegin = "siteFunctions.setSubmitButtonEnabled(false);siteFunctions.showLoadingImage();", 
+                OnComplete = "siteFunctions.setSubmitButtonEnabled(true);siteFunctions.hideLoadingImage();",
+                OnSuccess = onSuccess 
+            }, 
+            new { @class = "form-inline" }))
+        {
+            @Html.AntiForgeryToken()
+                
+            @Html.HiddenFor(m => m.Id)
+
+            <div class="input-append date" data-date="@Model.DateString" data-date-format="dd-mm-yyyy">
+                @Html.TextBox("Date", @Model.DateString, new { @class = "span2", @readonly = "true" })
+                <span class="add-on"><i class="icon-calendar"></i></span>                
+	        </div>                          
+            
+            <span><button type="submit" class="btn btn-primary" data-loading-text="Updating..." style="margin-bottom:1px;">Select</button> <img id="loading" src="~/Content/images/loader.gif" alt="" style="display:none;"/></span>
+        }
+
+        <div id="@divId">
+            @Html.Partial("_DayEntryListPartial", Model.Entries, new ViewDataDictionary { {"TableId", tableId } })
+        </div>        
+    </div>    
+</div>
+

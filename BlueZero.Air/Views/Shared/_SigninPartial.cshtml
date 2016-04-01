@@ -1,0 +1,12 @@
+﻿<div class="pull-right">
+    <ul class="nav pull-right">
+        @if (Request.IsAuthenticated) 
+        {
+            @Html.Partial("_SignedInUserPartial")
+        }
+        else
+        {
+            <li>@Html.ActionLink("Sign In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        }
+    </ul>
+</div>

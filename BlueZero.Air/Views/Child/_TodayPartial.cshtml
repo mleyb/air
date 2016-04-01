@@ -1,0 +1,11 @@
+﻿@model BlueZero.Air.Models.ChildTodayViewModel
+
+<h3>Today <small>@Model.DateString</small></h3>
+
+<div class="row">
+    <div class="span10">
+        <div>
+            @Html.Partial("_DayEntryListPartial", Model.Entries, new ViewDataDictionary { {"TableId", "today-entries-" + Model.Id } })
+        </div>  
+    </div>    
+</div> 

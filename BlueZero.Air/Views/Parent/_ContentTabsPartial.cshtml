@@ -1,0 +1,25 @@
+﻿@model BlueZero.Air.Models.ParentIndexViewModel
+
+<div id="content" class="tab-content">
+@{
+    for (int i = 0; i < Model.ChildInfos.Count; i++)
+    {
+        <div class="tab-pane fade in @(i == 0 ? "active" : "")" id="summary-@i">
+            @{ Html.RenderAction("Summary", "Child", new { id = Model.ChildInfos[i].Id }); }
+        </div>
+        <div class="tab-pane fade" id="today-@i">
+            @{ Html.RenderAction("Today", "Child", new { id = Model.ChildInfos[i].Id }); }
+        </div>      
+        <div class="tab-pane fade" id="daybyday-@i">
+            @{ Html.RenderAction("DayByDay", "Child", new { id = Model.ChildInfos[i].Id }); }
+        </div>  
+        <div class="tab-pane fade" id="charts-@i">
+            @*@{ Html.RenderAction("Charts", "Child", new { id = Model.ChildInfos[i].Id }); }*@
+            @{ Html.RenderAction("Charts", "Child", new { id = Model.ChildInfos[i].Id }); }
+        </div>  
+        <div class="tab-pane fade" id="notes-@i">
+            @{ Html.RenderAction("Notes", "Child", new { id = Model.ChildInfos[i].Id }); }
+        </div>  
+    }
+}   
+</div>

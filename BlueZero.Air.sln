@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueZero.Air", "BlueZero.Air\BlueZero.Air.csproj", "{53008223-AB67-44E3-AFEB-1DEC7E1BD7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueZero.Air.Tests", "BlueZero.Air.Tests\BlueZero.Air.Tests.csproj", "{A6245365-52BD-4483-83E3-566B0B2D679E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueZero.Air.Data", "BlueZero.Air.Data\BlueZero.Air.Data.csproj", "{D2A8227C-9EFF-4C86-8CF8-FE02F9ABB89C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueZero.Air.Data.Services", "BlueZero.Air.Data.Services\BlueZero.Air.Data.Services.csproj", "{D3515D42-B949-46EA-8778-20ADDCFA35DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueZero.Air.Support", "BlueZero.Air.Support\BlueZero.Air.Support.csproj", "{6210A1FA-9971-4FC6-99E3-04B8E45E8304}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B397EA62-9324-4DDD-80A3-F9A0B8F63051}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{04023E23-223F-4FE2-A4CD-3978AA5FF67C}"
+	ProjectSection(SolutionItems) = preProject
+		libs\AdaptiveImages.dll = libs\AdaptiveImages.dll
+		libs\GoogleChartSharp.dll = libs\GoogleChartSharp.dll
+		libs\NMALib.dll = libs\NMALib.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{E8404992-D219-4159-86F6-33D208308DFE}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://bluezero.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BlueZero.Air.Tests\\BlueZero.Air.Tests.csproj
+		SccProjectName1 = BlueZero.Air.Tests
+		SccLocalPath1 = BlueZero.Air.Tests
+		SccProjectUniqueName2 = BlueZero.Air\\BlueZero.Air.csproj
+		SccProjectName2 = BlueZero.Air
+		SccLocalPath2 = BlueZero.Air
+		SccProjectUniqueName3 = BlueZero.Air.Data\\BlueZero.Air.Data.csproj
+		SccProjectName3 = BlueZero.Air.Data
+		SccLocalPath3 = BlueZero.Air.Data
+		SccProjectUniqueName4 = BlueZero.Air.Data.Services\\BlueZero.Air.Data.Services.csproj
+		SccProjectName4 = BlueZero.Air.Data.Services
+		SccLocalPath4 = BlueZero.Air.Data.Services
+		SccProjectUniqueName5 = BlueZero.Air.Support\\BlueZero.Air.Support.csproj
+		SccProjectName5 = BlueZero.Air.Support
+		SccLocalPath5 = BlueZero.Air.Support
+		SccProjectUniqueName6 = TestClient\\TestClient.csproj
+		SccProjectName6 = TestClient
+		SccLocalPath6 = TestClient
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53008223-AB67-44E3-AFEB-1DEC7E1BD7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53008223-AB67-44E3-AFEB-1DEC7E1BD7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53008223-AB67-44E3-AFEB-1DEC7E1BD7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53008223-AB67-44E3-AFEB-1DEC7E1BD7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6245365-52BD-4483-83E3-566B0B2D679E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6245365-52BD-4483-83E3-566B0B2D679E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6245365-52BD-4483-83E3-566B0B2D679E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6245365-52BD-4483-83E3-566B0B2D679E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A8227C-9EFF-4C86-8CF8-FE02F9ABB89C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A8227C-9EFF-4C86-8CF8-FE02F9ABB89C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A8227C-9EFF-4C86-8CF8-FE02F9ABB89C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A8227C-9EFF-4C86-8CF8-FE02F9ABB89C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3515D42-B949-46EA-8778-20ADDCFA35DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3515D42-B949-46EA-8778-20ADDCFA35DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3515D42-B949-46EA-8778-20ADDCFA35DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3515D42-B949-46EA-8778-20ADDCFA35DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6210A1FA-9971-4FC6-99E3-04B8E45E8304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6210A1FA-9971-4FC6-99E3-04B8E45E8304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6210A1FA-9971-4FC6-99E3-04B8E45E8304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6210A1FA-9971-4FC6-99E3-04B8E45E8304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8404992-D219-4159-86F6-33D208308DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8404992-D219-4159-86F6-33D208308DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8404992-D219-4159-86F6-33D208308DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8404992-D219-4159-86F6-33D208308DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,42 @@
+﻿@model BlueZero.Air.Models.SleepViewModel
+
+<div>
+    <ul class="unstyled">
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Date, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Date)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Start, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Start)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.End, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.End)
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="control-group">
+                <div class="controls">
+                    @Html.LabelFor(m => m.Duration, new { @class = "control-label label" })
+                    <br />
+                    @Html.DisplayFor(m => m.Duration)
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
