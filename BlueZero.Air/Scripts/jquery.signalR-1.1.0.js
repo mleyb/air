@@ -1527,7 +1527,7 @@
                         }
                     }
                     catch (e) {
-                        connection.log("SignalR: Error occured when stopping foreverFrame transport. Message = " + e.message);
+                        connection.log("SignalR: Error occurred when stopping foreverFrame transport. Message = " + e.message);
                     }
                 }
                 $(connection.frame).remove();
@@ -1748,7 +1748,7 @@
                         });
 
 
-                        // This will only ever pass after an error has occured via the poll ajax procedure.
+                        // This will only ever pass after an error has occurred via the poll ajax procedure.
                         if (reconnecting && raiseReconnect === true) {
                             // We wait to reconnect depending on how many times we've failed to reconnect.
                             // This is essentially a heuristic that will exponentially increase in wait time before

@@ -4332,7 +4332,7 @@ var VMLElement = {
 						while (i--) {
 
 							// Multiply by 10 to allow subpixel precision.
-							// Substracting half a pixel seems to make the coordinates
+							// Subtracting half a pixel seems to make the coordinates
 							// align with SVG, but this hasn't been tested thoroughly
 							if (isNumber(value[i])) {
 								convertedPath[i] = mathRound(value[i] * 10) - 5;
