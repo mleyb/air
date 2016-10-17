@@ -227,7 +227,7 @@ namespace BlueZero.Air.Support
         }
 
         /// <summary>
-        /// Implicitly converts the ShortGuid to it's string equivilent
+        /// Implicitly converts the ShortGuid to it's string equivalent
         /// </summary>
         /// <param name="shortGuid"></param>
         /// <returns></returns>
@@ -237,7 +237,7 @@ namespace BlueZero.Air.Support
         }
 
         /// <summary>
-        /// Implicitly converts the ShortGuid to it's Guid equivilent
+        /// Implicitly converts the ShortGuid to it's Guid equivalent
         /// </summary>
         /// <param name="shortGuid"></param>
         /// <returns></returns>
