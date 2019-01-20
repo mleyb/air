@@ -182,22 +182,5 @@ namespace BlueZero.Air
 
             return success;
         }
-
-
-/*
-
-        2012-08-31 08:45:50,892 [50] DEBUG BlueZero.Isis.Api.AccessTokenAuthorizeAttribute [(null)] - {
-  "id": "102430956086763645040",
-  "email": "mleybourne1@gmail.com",
-  "verified_email": true,
-  "name": "Mark Leybourne",
-  "given_name": "Mark",
-  "family_name": "Leybourne",
-  "link": "https://plus.google.com/102430956086763645040",
-  "picture": "https://lh3.googleusercontent.com/-HB9nEDI9u9Q/AAAAAAAAAAI/AAAAAAAAEQY/BvBZzVArX-I/photo.jpg",
-  "gender": "male",
-  "locale": "en-GB"
-}*/
-
     }
 }
